@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  block content
+    div
+     h1= title
+     form(name="add-estimation", method="post", action="/api/oauth/linkedin")
+       div.input
+         span.label Linked in public URL
+         input(type="text", name="public_url", placeholder="full_linkedin_public_url")
+       div.actions
+         input(class="button" type="submit", value="Submit")
+
